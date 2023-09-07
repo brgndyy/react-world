@@ -1,5 +1,10 @@
-import React from "react";
+import SignForm from "@/components/SignForm/SignForm";
+import SignUpFunnel from "@/components/SignUpFunnel/SignUpFunnel";
 
 export default function RegisterPage() {
-  return <div>회원 등록 페이지입니다!</div>;
+  return (
+    <>
+      <SignUpFunnel />
+    </>
+  );
 }
