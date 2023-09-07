@@ -1,5 +1,9 @@
-import React from "react";
+import SignUpFunnel from "@/components/SignUpFunnel/SignUpFunnel";
+import { isUserLoggedIn } from "@/utils/isUserLoggedIn";
+import ExistingLoggedIn from "@/components/composables/ExistingLoggedIn/ExistingLoggedIn";
 
 export default function RegisterPage() {
-  return <div>회원 등록 페이지입니다!</div>;
+  const isLoggedIn = isUserLoggedIn();
+
+  return <>{isLoggedIn ? <ExistingLoggedIn /> : <SignUpFunnel />}</>;
 }

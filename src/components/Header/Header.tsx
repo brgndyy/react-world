@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import {
   header_container,
   header_category_container,
@@ -15,13 +16,26 @@ import {
 } from "@/styles/togglebutton.css";
 import WhiteLogoImage from "./WhiteLogoImage";
 import DarkLogoImage from "./DarkLogoImage";
-import Link from "next/link";
+import UserProfile from "../User/UserProfile";
+import Sign from "./Sign";
 
 type HeaderProps = {
   currentTheme: string;
+  loggedInSuccess: boolean;
+  userInfo: {
+    username: string;
+    email: string;
+    bio: string | null;
+    token: string;
+    image: string;
+  };
 };
 
-export default function Header({ currentTheme }: HeaderProps) {
+export default function Header({
+  currentTheme,
+  loggedInSuccess,
+  userInfo,
+}: HeaderProps) {
   const { darkTheme, themeToggleHandler } = useTheme(currentTheme);
 
   return (
@@ -38,16 +52,7 @@ export default function Header({ currentTheme }: HeaderProps) {
           htmlFor="darkmode-toggle"
           className={`${toggle_label} ${darkTheme ? toggle_label_checked : ""}`}
         ></label>
-        <div className={`${header_link}`}>
-          <Link href={"/register"} className={link}>
-            Sign in
-          </Link>
-        </div>
-        <div className={header_link}>
-          <Link href={"/login"} className={link}>
-            Login
-          </Link>
-        </div>
+        {loggedInSuccess ? <UserProfile userInfo={userInfo} /> : <Sign />}
       </div>
     </div>
   );

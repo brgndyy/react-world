@@ -40,9 +40,6 @@ export const home_articles_ul = style({
   padding: "0",
   "@media": {
     "(max-width : 1300px)": {
-      gridTemplateColumns: "repeat(2, 1fr)",
-    },
-    "(max-width : 1180px)": {
       gridTemplateColumns: "repeat(1, 1fr)",
     },
   },
@@ -71,9 +68,6 @@ export const article_container = style({
       width: "20rem",
     },
     "(max-width : 1300px)": {
-      width: "25rem",
-    },
-    "(max-width : 1180px)": {
       width: "45rem",
     },
     "(max-width : 800px)": {

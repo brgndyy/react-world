@@ -1,5 +1,9 @@
-import React from "react";
+import SignForm from "@/components/SignForm/SignForm";
 
 export default function LoginPage() {
-  return <div>로그인 페이지입니다!</div>;
+  return (
+    <>
+      <SignForm state={"Sign in"} />
+    </>
+  );
 }

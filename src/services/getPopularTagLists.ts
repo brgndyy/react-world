@@ -18,13 +18,8 @@ export const getPopularTagLists = async () => {
 
     const { articles } = data;
 
-    const popularTags = countArticleTags({ articles });
-
-    if (!popularTags) {
-      return [];
-    } else {
-      return popularTags;
-    }
+    const popularTags = countArticleTags({ articles }) || [];
+    return popularTags;
   } catch (err) {
     console.error(err);
     return [];

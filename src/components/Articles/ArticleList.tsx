@@ -10,7 +10,7 @@ import {
 } from "@/styles/home_articles.css";
 import LoadingSpinner from "../composables/LoadingSpinner.tsx/LoadingSpinner";
 import Pagination from "./Pagination/ Pagination";
-import PopularTags from "../PopularTags/PopularTags";
+import PopularTags from "../composables/PopularTags/PopularTags";
 import { useArticle } from "@/libs/hooks/useArticle";
 
 type Article = {

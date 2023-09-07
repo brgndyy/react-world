@@ -43,3 +43,9 @@ globalStyle(`[data-theme='dark']`, {
   color: darkVars.text_color,
   // ... 기타 스타일
 });
+
+globalStyle("#toast-root", {
+  position: "fixed",
+  top: "10%",
+  right: "13%",
+});

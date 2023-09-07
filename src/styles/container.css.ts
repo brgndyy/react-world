@@ -16,6 +16,17 @@ export const page_button_active_background_color_var = createVar();
 export const page_button_active_color_var = createVar();
 export const popular_tags_background_color_var = createVar();
 export const tag_background_color_var = createVar();
+export const form_container_background_color_var = createVar();
+export const form_toggle_text_color_var = createVar();
+export const input_border_var = createVar();
+export const form_button_background_color_var = createVar();
+export const form_button_text_color_var = createVar();
+export const toast_message_color_var = createVar();
+export const toast_progress_bar_color_var = createVar();
+export const user_profile_down_icon_color_var = createVar();
+export const profile_menu_container_background_color_var = createVar();
+export const profile_menu_container_hover_background_color_var = createVar();
+export const profile_menu_text_color_var = createVar();
 
 export const color_state = style({
   vars: {
@@ -33,6 +44,17 @@ export const color_state = style({
     [page_button_color_var]: "#404040",
     [page_button_active_background_color_var]: "#e5d1d1",
     [page_button_active_color_var]: "#9c8b8b",
+    [form_container_background_color_var]: "#fff",
+    [form_toggle_text_color_var]: "#df4f4f",
+    [input_border_var]: "0.3px solid #cccc",
+    [form_button_background_color_var]: "#df4f4f",
+    [form_button_text_color_var]: "#efefef",
+    [toast_message_color_var]: "#fff",
+    [toast_progress_bar_color_var]: "#efefef",
+    [user_profile_down_icon_color_var]: "#fff",
+    [profile_menu_container_background_color_var]: "#fff",
+    [profile_menu_container_hover_background_color_var]: "#ececec",
+    [profile_menu_text_color_var]: "#212529",
   },
   selectors: {
     '[data-theme="dark"] &': {
@@ -53,6 +75,17 @@ export const color_state = style({
         [page_button_active_color_var]: "",
         [popular_tags_background_color_var]: "#1b1b1b",
         [tag_background_color_var]: "#282828",
+        [form_container_background_color_var]: "#232323",
+        [form_toggle_text_color_var]: "#df4f4f",
+        [input_border_var]: "none",
+        [form_button_background_color_var]: "#c83737",
+        [form_button_text_color_var]: "#efefef",
+        [toast_message_color_var]: "#fff",
+        [toast_progress_bar_color_var]: "#efefef",
+        [user_profile_down_icon_color_var]: "#fff",
+        [profile_menu_container_background_color_var]: "#1e1e1e",
+        [profile_menu_container_hover_background_color_var]: "#292929",
+        [profile_menu_text_color_var]: "#efefef",
       },
     },
   },

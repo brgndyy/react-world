@@ -11,6 +11,7 @@ export const tag_container = style({
   position: "fixed",
   left: "2.5%",
   padding: "0.5rem",
+  zIndex: "100",
   background: popular_tags_background_color_var,
   borderRadius: "0.5rem",
 });

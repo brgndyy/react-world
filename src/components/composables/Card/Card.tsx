@@ -1,9 +1,8 @@
 import { card } from "@/styles/card.css";
+import { PropsWithChildren } from "react";
 
-type Children = {
-  children: React.ReactNode;
-};
+export default function Card(props: PropsWithChildren<{}>) {
+  const { children } = props;
 
-export default function Card({ children }: Children) {
   return <div className={card}>{children}</div>;
 }

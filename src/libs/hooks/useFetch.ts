@@ -11,7 +11,7 @@ const useFetch = () => {
       method: string = "GET",
       body: any = null,
       headers: Record<string, string> = {}
-    ): Promise<any> => {
+    ) => {
       setIsLoading(true);
 
       const httpAbortCtrl = new AbortController();
@@ -20,18 +20,15 @@ const useFetch = () => {
       try {
         const requestOptions: RequestInit = {
           method: method,
-          headers: headers,
+          headers: {
+            ...headers,
+            "Content-Type": "application/json",
+          },
           signal: httpAbortCtrl.signal,
         };
-
-        // POST 요청일 경우에만 credentials 포함
-        if (method === "POST") {
-          requestOptions.credentials = "include";
-        }
-
-        // body가 제공된 경우에만 body 포함
+        
         if (body) {
-          requestOptions.body = body;
+          requestOptions.body = JSON.stringify(body);
         }
 
         const res = await fetch(url, requestOptions);

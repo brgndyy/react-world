@@ -15,7 +15,7 @@ export const useArticle = ({
   const [currentArticles, setCurrenArticles] = useState(initialArticles);
   const [selectedSection, setSelectedSection] = useState<string>("Global Feed");
   const [tag, setTag] = useState<string | undefined>();
-  const { isLoading, error, sendRequest, clearError, setError } = useFetch();
+  const { isLoading, sendRequest } = useFetch();
 
   const fetchArticles = async (offset: number, tag?: string) => {
     const getArticlesEndPoint = tag
@@ -34,7 +34,7 @@ export const useArticle = ({
 
       setCurrenArticles(articles);
       setPageCount(pageCount);
-      setCurrentPage(1);
+      // setCurrentPage(1);
     } catch (err) {
       console.log(err);
     }
